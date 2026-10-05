@@ -1,0 +1,135 @@
+TAP version 13
+# Subtest: calculateSubtotal: корректно считает стоимость товаров
+    # Subtest: один товар
+    ok 1 - один товар
+      ---
+      duration_ms: 0.847317
+      type: 'test'
+      ...
+    # Subtest: несколько товаров
+    ok 2 - несколько товаров
+      ---
+      duration_ms: 0.140197
+      type: 'test'
+      ...
+    # Subtest: товар с количеством больше одного
+    ok 3 - товар с количеством больше одного
+      ---
+      duration_ms: 0.97171
+      type: 'test'
+      ...
+    1..3
+ok 1 - calculateSubtotal: корректно считает стоимость товаров
+  ---
+  duration_ms: 2.875143
+  type: 'test'
+  ...
+# Subtest: calculateSubtotal: пустая корзина имеет стоимость 0
+ok 2 - calculateSubtotal: пустая корзина имеет стоимость 0
+  ---
+  duration_ms: 0.142751
+  type: 'test'
+  ...
+# Subtest: applyDiscount: промокод STUDENT10 даёт скидку 10%
+ok 3 - applyDiscount: промокод STUDENT10 даёт скидку 10%
+  ---
+  duration_ms: 0.120106
+  type: 'test'
+  ...
+# Subtest: applyDiscount: промокод NODE20 даёт 20% скидки при сумме от 1000 рублей
+ok 4 - applyDiscount: промокод NODE20 даёт 20% скидки при сумме от 1000 рублей
+  ---
+  duration_ms: 0.077404
+  type: 'test'
+  ...
+# Subtest: applyDiscount: NODE20 работает при граничной сумме ровно 1000 рублей
+ok 5 - applyDiscount: NODE20 работает при граничной сумме ровно 1000 рублей
+  ---
+  duration_ms: 0.069853
+  type: 'test'
+  ...
+# Subtest: applyDiscount: NODE20 не применяется при сумме 999 рублей
+ok 6 - applyDiscount: NODE20 не применяется при сумме 999 рублей
+  ---
+  duration_ms: 0.333191
+  type: 'test'
+  ...
+# Subtest: applyDiscount: неизвестный промокод не даёт скидку
+ok 7 - applyDiscount: неизвестный промокод не даёт скидку
+  ---
+  duration_ms: 0.2784
+  type: 'test'
+  ...
+# Subtest: calculateDelivery: курьерская доставка стоит 300 рублей
+ok 8 - calculateDelivery: курьерская доставка стоит 300 рублей
+  ---
+  duration_ms: 0.170801
+  type: 'test'
+  ...
+# Subtest: calculateDelivery: курьерская доставка бесплатна при сумме ровно 3000 рублей
+ok 9 - calculateDelivery: курьерская доставка бесплатна при сумме ровно 3000 рублей
+  ---
+  duration_ms: 0.07442
+  type: 'test'
+  ...
+# Subtest: calculateDelivery: самовывоз бесплатный
+ok 10 - calculateDelivery: самовывоз бесплатный
+  ---
+  duration_ms: 0.06138
+  type: 'test'
+  ...
+# Subtest: calculateSubtotal: отрицательная цена вызывает ошибку
+ok 11 - calculateSubtotal: отрицательная цена вызывает ошибку
+  ---
+  duration_ms: 0.498674
+  type: 'test'
+  ...
+# Subtest: calculateSubtotal: нулевое количество вызывает ошибку
+ok 12 - calculateSubtotal: нулевое количество вызывает ошибку
+  ---
+  duration_ms: 0.115009
+  type: 'test'
+  ...
+# Subtest: calculateSubtotal: дробное количество вызывает ошибку
+ok 13 - calculateSubtotal: дробное количество вызывает ошибку
+  ---
+  duration_ms: 0.097724
+  type: 'test'
+  ...
+# Subtest: calculateDelivery: неизвестный способ доставки вызывает ошибку
+ok 14 - calculateDelivery: неизвестный способ доставки вызывает ошибку
+  ---
+  duration_ms: 0.118244
+  type: 'test'
+  ...
+# Subtest: calculateTotal: корректно рассчитывает полный заказ
+ok 15 - calculateTotal: корректно рассчитывает полный заказ
+  ---
+  duration_ms: 0.159515
+  type: 'test'
+  ...
+# Subtest: placeOrder: вызывает paymentService.pay один раз и передаёт правильную сумму
+ok 16 - placeOrder: вызывает paymentService.pay один раз и передаёт правильную сумму
+  ---
+  duration_ms: 0.826457
+  type: 'test'
+  ...
+# Subtest: placeOrder: корректно передаёт ошибку платёжного сервиса
+ok 17 - placeOrder: корректно передаёт ошибку платёжного сервиса
+  ---
+  duration_ms: 0.487458
+  type: 'test'
+  ...
+1..17
+# tests 20
+# suites 0
+# pass 20
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 122.686287
+
+STDERR:
+
+Exit code: 0

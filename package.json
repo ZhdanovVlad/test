@@ -1,0 +1,12 @@
+{
+  "name": "node-order-testing",
+  "version": "1.0.0",
+  "description": "Практическая работа: модульное тестирование расчёта стоимости заказа в Node.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
